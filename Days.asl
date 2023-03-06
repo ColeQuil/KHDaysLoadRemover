@@ -105,11 +105,12 @@ startup
 		settings.Add("354", false, "Day: 354 - Place the Shiny Device", "S");
 		settings.Add("355", false, "Day: 355 - Saix", "S");
 		settings.Add("357", false, "Day: 357 - Xion", "S");
-		settings.Add("358", false, "Day: 358 - Riku [Start of Credits]", "S");
+		settings.Add("358", false, "Day: 358 - Riku [Start of Credits/Not True End Split]", "S");
 }
 
 init
 {
+	vars.introDay = 0;
 	string EmuVersion = modules.First().ModuleMemorySize.ToString();
 	switch (EmuVersion) {
 		case "146567168":
@@ -144,9 +145,8 @@ split
 		int Today = day*2;
 		if(odd>0){Today++;}
 		
-		var introDay = "";
-		if (Yesterday == 255 && introDay != ""){
-			introDay = "1";
+		if (vars.introDay == 0 && Yesterday == 255){
+			vars.introDay = 1;
 			return;
 		}
 		return settings[Yesterday.ToString()];
