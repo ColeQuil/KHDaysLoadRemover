@@ -3,6 +3,7 @@ state("DeSmuME_0.9.10_x86", "0.9.10 x86")
 	byte black: "DeSmuME_0.9.10_x86.exe", 0x5F1A4A8;
 	bool writtenText: "DeSmuME_0.9.10_x86.exe", 0x308A934;
 	ushort CurrentDay: "DeSmuME_0.9.10_x86.exe", 0x307FA83;
+	byte menuState: "DeSmuME_0.9.10_x86.exe", 0x3093418;
 	//Mem Size: 101314560 | Values x0400000 - x6000000
 }
 
@@ -11,6 +12,7 @@ state("DeSmuME_0.9.10_x64", "0.9.10 x64")
 	byte black: "DeSmuME_0.9.10_x64.exe", 0x823E1AC;
 	bool writtenText: "DeSmuME_0.9.10_x64.exe", 0x538B8AC;
 	ushort CurrentDay: "DeSmuME_0.9.10_x64.exe", 0x53809FA;
+	byte menuState: "DeSmuME_0.9.10_x64.exe", 0x5394390;
 	//Mem Size: 138682368 | Values x140000000 - x200000000
 }
 
@@ -19,6 +21,7 @@ state("DeSmuME_0.9.11_x86", "0.9.11 x86")
 	byte black: "DeSmuME_0.9.11_x86.exe", 0x6591E28; 
 	bool writtenText: "DeSmuME_0.9.11_x86.exe", 0x3040334;
 	ushort CurrentDay: "DeSmuME_0.9.11_x86.exe", 0x3035483;
+	byte menuState: "DeSmuME_0.9.11_x86.exe", 0x3048E18;
 	//Mem Size: 107683840 | Values x0400000 - x6000000
 }
 
@@ -27,6 +30,7 @@ state("DeSmuME_0.9.11_x64", "0.9.11 x64")
 	byte black: "DeSmuME_0.9.11_x64.exe", 0x8B22F4C;
 	bool writtenText: "DeSmuME_0.9.11_x64.exe", 0x55B06CC;
 	ushort CurrentDay: "DeSmuME_0.9.11_x64.exe", 0x55A581A;
+	byte menuState: "DeSmuME_0.9.11_x64.exe", 0x55B91B0;
 	//Mem Size: 146567168 | Values x140000000 - x200000000
 }
 
@@ -111,6 +115,7 @@ startup
 init
 {
 	vars.introDay = 0;
+	vars.loadTimer = 0;
 	string EmuVersion = modules.First().ModuleMemorySize.ToString();
 	switch (EmuVersion) {
 		case "146567168":
@@ -157,5 +162,20 @@ split
 
 isLoading
 {
-	return (current.black == 0x10 && !current.writtenText);
+	//In a Menu
+	if (current.menuState == 8 || current.menuState == 13){
+		return false;
+	}
+	//Out of a Menu
+	if (current.menuState == 0x07 && (old.menuState == 8 || old.menuState == 13)){
+		vars.loadTimer = 5;
+		return false;
+	}
+	//Out of a Menu, but still Loading in.
+	if (current.menuState == 0x07 && current.black == 0x10 && vars.loadTimer > 0){return false;}
+	if (vars.loadTimer > 0){vars.loadTimer = --vars.loadTimer;}
+	
+	if (vars.loadTimer == 0){
+		return (current.black == 0x10 && !current.writtenText);
+	}
 }
