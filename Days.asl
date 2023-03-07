@@ -2,7 +2,7 @@ state("DeSmuME_0.9.10_x86", "0.9.10 x86")
 {
 	byte black: "DeSmuME_0.9.10_x86.exe", 0x5F1A4A8;
 	bool writtenText: "DeSmuME_0.9.10_x86.exe", 0x308A934;
-	ushort CurrentDay: "DeSmuME_0.9.10_x86.exe", 0x307FA83;
+	ushort CurrentDay: "DeSmuME_0.9.10_x86.exe", 0x307FA82;
 	byte menuState: "DeSmuME_0.9.10_x86.exe", 0x3093418;
 	//Mem Size: 101314560 | Values x0400000 - x6000000
 }
@@ -20,7 +20,7 @@ state("DeSmuME_0.9.11_x86", "0.9.11 x86")
 {
 	byte black: "DeSmuME_0.9.11_x86.exe", 0x6591E28; 
 	bool writtenText: "DeSmuME_0.9.11_x86.exe", 0x3040334;
-	ushort CurrentDay: "DeSmuME_0.9.11_x86.exe", 0x3035483;
+	ushort CurrentDay: "DeSmuME_0.9.11_x86.exe", 0x3035482;
 	byte menuState: "DeSmuME_0.9.11_x86.exe", 0x3048E18;
 	//Mem Size: 107683840 | Values x0400000 - x6000000
 }
