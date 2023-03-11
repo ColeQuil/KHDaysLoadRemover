@@ -2,8 +2,14 @@ state("DeSmuME_0.9.10_x86", "0.9.10 x86")
 {
 	byte topFade: "DeSmuME_0.9.10_x86.exe", 0x3EEB524;
 	byte bottomFade: "DeSmuME_0.9.10_x86.exe", 0x5F1A4A8;
-	ushort CurrentDay: "DeSmuME_0.9.10_x86.exe", 0x307FA82;
-	byte menuState: "DeSmuME_0.9.10_x86.exe", 0x3093418;
+	ushort dayInMemoryNTSC: "DeSmuME_0.9.10_x86.exe", 0x307FA82;
+	ushort dayInMemoryJPN: "DeSmuME_0.9.10_x86.exe", 0x307EBE2;
+	ushort dayInMemoryPAL: "DeSmuME_0.9.10_x86.exe", 0x3080862;
+	byte menuStateNTSC: "DeSmuME_0.9.10_x86.exe", 0x3093418;
+	byte menuStateJPN: "DeSmuME_0.9.10_x86.exe", 0x3092878;
+	byte menuStatePAL: "DeSmuME_0.9.10_x86.exe", 0x3093438;
+	byte DSLang: "DeSmuME_0.9.10_x86.exe", 0x32EB19C;
+	byte versionLang: "DeSmuME_0.9.10_x86.exe", 0x32EB2C7;
 	//Event Flag? DeSmuME_0.9.10_x86.exe+2F3770C
 	//# of Things killed in Mission: DeSmuME_0.9.10_x86.exe+30934A0
 	//Current Objective? DeSmuME_0.9.10_x86.exe+30934B0
@@ -14,8 +20,14 @@ state("DeSmuME_0.9.10_x64", "0.9.10 x64")
 {
 	byte topFade: "DeSmuME_0.9.10_x64.exe", 0x61EC49C;
 	byte bottomFade: "DeSmuME_0.9.10_x64.exe", 0x823E1AC;
-	ushort CurrentDay: "DeSmuME_0.9.10_x64.exe", 0x53809FA;
-	byte menuState: "DeSmuME_0.9.10_x64.exe", 0x5394390;
+	ushort dayInMemoryNTSC: "DeSmuME_0.9.10_x64.exe", 0x53809FA;
+	ushort dayInMemoryJPN: "DeSmuME_0.9.10_x64.exe", 0x537FB5A;
+	ushort dayInMemoryPAL: "DeSmuME_0.9.10_x64.exe", 0x53817DA;
+	byte menuStateNTSC: "DeSmuME_0.9.10_x64.exe", 0x5394390;
+	byte menuStateJPN: "DeSmuME_0.9.10_x64.exe", 0x53937F0;
+	byte menuStatePAL: "DeSmuME_0.9.10_x64.exe", 0x53943B0;
+	byte DSLang: "DeSmuME_0.9.10_x64.exe", 0x55EC114;
+	byte versionLang: "DeSmuME_0.9.10_x64.exe", 0x83603A7;
 	//Mem Size: 138682368 | Values x140000000 - x200000000
 }
 
@@ -23,8 +35,14 @@ state("DeSmuME_0.9.11_x86", "0.9.11 x86")
 {
 	byte topFade: "DeSmuME_0.9.11_x86.exe", 0x3EA0F24;
 	byte bottomFade: "DeSmuME_0.9.11_x86.exe", 0x3EA1F24;
-	ushort CurrentDay: "DeSmuME_0.9.11_x86.exe", 0x3035482;
-	byte menuState: "DeSmuME_0.9.11_x86.exe", 0x3048E18;
+	ushort dayInMemoryNTSC: "DeSmuME_0.9.11_x86.exe", 0x3035482;
+	ushort dayInMemoryJPN: "DeSmuME_0.9.11_x86.exe", 0x30345E2;
+	ushort dayInMemoryPAL: "DeSmuME_0.9.11_x86.exe", 0x3036262;
+	byte menuStateNTSC: "DeSmuME_0.9.11_x86.exe", 0x3048E18;
+	byte menuStateJPN: "DeSmuME_0.9.11_x86.exe", 0x3048278;
+	byte menuStatePAL: "DeSmuME_0.9.11_x86.exe", 0x3048E38;
+	byte DSLang: "DeSmuME_0.9.11_x86.exe", 0x32A0B9C;
+	byte versionLang: "DeSmuME_0.9.11_x86.exe", 0x32A0CC7;
 	//Mem Size: 107683840 | Values x0400000 - x6000000
 }
 
@@ -32,13 +50,23 @@ state("DeSmuME_0.9.11_x64", "0.9.11 x64")
 {
 	byte topFade: "DeSmuME_0.9.11_x64.exe", 0x64112BC;
 	byte bottomFade: "DeSmuME_0.9.11_x64.exe", 0x8B22F4C;
-	ushort CurrentDay: "DeSmuME_0.9.11_x64.exe", 0x55A581A;
-	byte menuState: "DeSmuME_0.9.11_x64.exe", 0x55B91B0;
+	ushort dayInMemoryNTSC: "DeSmuME_0.9.11_x64.exe", 0x55A581A;
+	ushort dayInMemoryJPN: "DeSmuME_0.9.11_x64.exe", 0x55A497A;
+	ushort dayInMemoryPAL: "DeSmuME_0.9.11_x64.exe", 0x55A65FA;
+	byte menuStateNTSC: "DeSmuME_0.9.11_x64.exe", 0x55B91B0;
+	byte menuStateJPN: "DeSmuME_0.9.11_x64.exe",  0x55B8610;
+	byte menuStatePAL: "DeSmuME_0.9.11_x64.exe", 0x55B91D0;
+	byte DSLang: "DeSmuME_0.9.11_x64.exe", 0x5810F34;
+	byte versionLang: "DeSmuME_0.9.11_x64.exe", 0x8B44997;
 	//Mem Size: 146567168 | Values x140000000 - x200000000
 }
 
 startup
 {
+	vars.introDay = 0;
+	vars.loadTimer = 0;
+	vars.missionSelect = 0;
+	vars.GameRegion = 0;
 	settings.Add("Versions", false, "Versions Supported: (These Check Boxes Do Nothing)");
 		settings.Add("9.10 x86", false, "DeSmuME_0.9.10 x86 (32-Bit)", "Versions");
 		settings.Add("9.10 x64", false, "DeSmuME_0.9.10 x64 (64-Bit)", "Versions");
@@ -117,9 +145,11 @@ startup
 
 init
 {
-	vars.introDay = 0;
-	vars.loadTimer = 0;
-	vars.missionSelect = 0;
+	if (vars.GameRegion == 0){
+		if (current.versionLang==0x45)vars.GameRegion = "E";
+		if (current.versionLang==0x4A)vars.GameRegion = "J";
+		if (current.versionLang==0x50)vars.GameRegion = "P";
+	}
 	string EmuVersion = modules.First().ModuleMemorySize.ToString();
 	switch (EmuVersion) {
 		case "146567168":
@@ -142,14 +172,31 @@ init
 //start{}
 
 split
-{
-	if(current.CurrentDay != old.CurrentDay){
-		int Yesterday = (old.CurrentDay >>8)*2;
-		int oldOdd = old.CurrentDay&0xFF;
+{	
+	//Set addresses to the proper shared variable.
+	ushort currentDayInMemory = 0;
+	ushort oldDayInMemory = 0;
+	if (vars.GameRegion == "E"){
+		currentDayInMemory = current.dayInMemoryNTSC;
+		oldDayInMemory = old.dayInMemoryNTSC;
+	} else if (vars.GameRegion == "J"){
+		currentDayInMemory = current.dayInMemoryJPN;
+		oldDayInMemory = old.dayInMemoryJPN;
+	} else if (vars.GameRegion == "P"){
+		currentDayInMemory = current.dayInMemoryPAL;
+		oldDayInMemory = old.dayInMemoryPAL;
+	}
+	/*Run Started. Reinitialize the Intro Double Split Prevention.
+		This is also shared with a bunch of main menu stuff, like "Continue" or "Console Reset"*/
+	if (currentDayInMemory == 0xC880 && vars.introDay !=0)vars.introDay = 0;
+	//Calculate the Day
+	if(currentDayInMemory != oldDayInMemory){
+		int Yesterday = (oldDayInMemory >>8)*2;
+		int oldOdd = oldDayInMemory&0xFF;
 		if(oldOdd>0){Yesterday++;}
 		
-		int Today = (current.CurrentDay >>8)*2;
-		int odd = current.CurrentDay&0xFF;
+		int Today = (currentDayInMemory >>8)*2;
+		int odd = currentDayInMemory&0xFF;
 		if(odd>0){Today++;}
 		
 		if (vars.introDay == 0 && Yesterday == 255){
@@ -160,46 +207,135 @@ split
 	}
 }
 
-//update{}
+update
+{
+	if (current.versionLang!=old.versionLang){
+		if (current.versionLang==0x45)vars.GameRegion = "E";
+		if (current.versionLang==0x4A)vars.GameRegion = "J";
+		if (current.versionLang==0x50)vars.GameRegion = "P";
+	}
+}
 
 isLoading
 {
 	//The Load Remover.
-	string stateCheck = string.Format("{0:X2}", current.menuState);
-	switch(stateCheck){
-		case "07": //Able to menu.
-			if (current.bottomFade != 0x10) vars.missionSelect = 0;
-			if (vars.missionSelect == 1) return true;
-			
-			if(old.menuState == 0x08 || old.menuState == 0x0D){
-				vars.loadTimer = 3;
+	string stateCheck = "";
+	if (vars.GameRegion == "J") {
+		stateCheck = string.Format("{0:X2}", current.menuStateJPN);
+		switch(stateCheck){
+			case "00": //Day Display Counter(JP)
+			case "02": //Cutscenes (JP) + (Roxas Monologues JP) + FMVs
+				return (current.topFade == 0x10);
+				break;
+			case "07": //Able to menu
+				if (current.bottomFade != 0x10) vars.missionSelect = 0;
+				if (vars.missionSelect == 1) return true;
+				
+				if(old.menuStateJPN == 0x08 || old.menuStateJPN == 0x0D)vars.loadTimer = 3;
+				
+				if (current.bottomFade == 0x10 && vars.loadTimer > 0) return false;
+				if (vars.loadTimer > 0){
+					--vars.loadTimer;
+					return false;
+				}
+				return (current.bottomFade == 0x10);
+				break;
+			case "08": //Menu (Start)
+			case "0D": //Menu (Y)
 				return false;
-			}
-			if (current.bottomFade == 0x10 && vars.loadTimer > 0) return false;
-			if (vars.loadTimer > 0){
-				--vars.loadTimer;
+				break;
+			case "0B": //Mission Select (Only chains to 0x07 and 0xFF)
+				if (current.topFade==0x0E&&old.topFade<0x0E){vars.missionSelect = 1;}
+				if (vars.missionSelect > 0)return true;
+				return (current.topFade == 0x10);
+				break;
+			default: //Anything Else. Top and Bottom are usually the same in these cases.
+				if (vars.loadTimer > 0){--vars.loadTimer;}
+				vars.missionSelect = 0;
+				return (current.bottomFade == 0x10);
+				break;
+		}
+	}
+	if (vars.GameRegion == "E") {
+		stateCheck = string.Format("{0:X2}", current.menuStateNTSC);
+		switch(stateCheck){
+			case "07": //Able to menu
+				if (current.bottomFade != 0x10) vars.missionSelect = 0;
+				if (vars.missionSelect == 1) return true;
+				if (old.menuStateNTSC == 0x08 || old.menuStateNTSC == 0x0D)vars.loadTimer = 3;
+				if (current.bottomFade == 0x10 && vars.loadTimer > 0) return false;
+				if (vars.loadTimer > 0){
+					--vars.loadTimer;
+					return false;
+				}
+				return (current.bottomFade == 0x10);
+				break;
+			case "08": //Menu (Start)
+			case "0D": //Menu (Y)
 				return false;
-			}
-			return (current.bottomFade == 0x10);
-			break;
-		case "08": //Menu (Start)
-		case "0D": //Menu (Y)
-			return false;
-			break;
-		case "0B": //Mission Select (Only chains to 0x07 and 0xFF)
-			if (current.topFade==0x0E){vars.missionSelect = 1;}
-			if (vars.missionSelect > 0)return true;
-			return (current.topFade == 0x10);
-			break;
-		case "0A": //FMVs
-		case "37": //Roxas Monologues
-		case "54": //Counted Day Display
-			return (current.topFade == 0x10);
-			break;
-		default: //Anything Else. Top and Bottom are usually the same in these cases.
-			if (vars.loadTimer > 0){--vars.loadTimer;}
-			vars.missionSelect = 0;
-			return (current.bottomFade == 0x10);
-			break;
+				break;
+			case "0B": //Mission Select (Only chains to 0x07 and 0xFF)
+				if (current.topFade==0x0E&&old.topFade<0x0E){vars.missionSelect = 1;}
+				if (vars.missionSelect > 0)return true;
+				return (current.topFade == 0x10);
+				break;
+			case "0A": //FMVs
+			case "37": //Roxas Monologues (ENG)
+			case "19": //Roxas Monologues (FREN)
+			case "54": //Day Display (NTSC)
+			case "7F": //Day Display (FREN)
+				return (current.topFade == 0x10);
+				break;
+			default: //Anything Else. Top and Bottom are usually the same in these cases.
+				if (vars.loadTimer > 0){--vars.loadTimer;}
+				vars.missionSelect = 0;
+				return (current.bottomFade == 0x10);
+				break;
+		}
+	}
+	if (vars.GameRegion == "P"){
+		stateCheck = string.Format("{0:X2}", current.menuStatePAL);
+		switch(stateCheck){
+			case "00": //Day Display (GER)
+				if (current.DSLang == 3) return current.topFade==0x10;
+				if (current.DSLang != 3) return current.bottomFade==0x10;
+				break;
+			case "07": //Able to menu
+				if (current.bottomFade != 0x10) vars.missionSelect = 0;
+				if (vars.missionSelect == 1) return true;
+				if (old.menuStatePAL == 0x08 || old.menuStatePAL == 0x0D)vars.loadTimer = 3;
+				
+				if (current.bottomFade == 0x10 && vars.loadTimer > 0) return false;
+				if (vars.loadTimer > 0){
+					--vars.loadTimer;
+					return false;
+				}
+				return (current.bottomFade == 0x10);
+				break;
+			case "08": //Menu (Start)
+			case "0D": //Menu (Y)
+				return false;
+				break;
+			case "0B": //Mission Select (Only chains to 0x07 and 0xFF)
+				if (current.topFade==0x0E&&old.topFade<0x0E){vars.missionSelect = 1;}
+				if (vars.missionSelect > 0)return true;
+				return (current.topFade == 0x10);
+				break;
+			case "02": //Cutscenes + Some FMVs
+			case "0A": //FMVs
+			case "19": //Roxas Monologues (FREN)
+			case "27": //Roxas Monologues (ITL)
+			case "37": //Roxas Monologues (ENG/SPN)
+			case "42": //Roxas Monologues (GER)
+			case "54": //Day Display Counter (ENG)
+			case "7F": //Day Display Counter (GER/SPN)
+				return (current.topFade == 0x10);
+				break;
+			default: //Anything Else. Top and Bottom are usually the same in these cases.
+				if (vars.loadTimer > 0){--vars.loadTimer;}
+				vars.missionSelect = 0;
+				return (current.bottomFade == 0x10);
+				break;
+		}
 	}
 }
