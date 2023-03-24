@@ -225,6 +225,7 @@ isLoading
 		switch(stateCheck){
 			case "00": //Day Display Counter(JP)
 			case "02": //Cutscenes (JP) + (Roxas Monologues JP) + FMVs
+			case "0C": //Moogle Shop
 				return (current.topFade == 0x10);
 				break;
 			case "07": //Able to menu
@@ -284,6 +285,7 @@ isLoading
 			case "19": //Roxas Monologues (FREN)
 			case "54": //Day Display (NTSC)
 			case "7F": //Day Display (FREN)
+			case "0C": //Moogle Shop
 				return (current.topFade == 0x10);
 				break;
 			default: //Anything Else. Top and Bottom are usually the same in these cases.
@@ -329,6 +331,7 @@ isLoading
 			case "42": //Roxas Monologues (GER)
 			case "54": //Day Display Counter (ENG)
 			case "7F": //Day Display Counter (GER/SPN)
+			case "0C": //Moogle Shop
 				return (current.topFade == 0x10);
 				break;
 			default: //Anything Else. Top and Bottom are usually the same in these cases.
